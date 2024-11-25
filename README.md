@@ -29,7 +29,7 @@ Most shared hosting servers have restrictions when it comes to email. Usually em
 * Authenticate using OAuth 2.0 protocol
 * Authenticate with encryption when sending an email (TLS/SSL)
 
-## Gmail SMTP Basic Setup
+## Gmail SMTP Basic Setup [Docs page](/docs/setup.md)
 
 * Create a new project in Google Developers Console.
 * Enable Gmail API in it.
@@ -70,4 +70,4 @@ Once you have configured the settings you can send a test email to check the fun
 
 ## Documentation
 
-For detailed setup instructions/troubleshooting please visit the [Gmail SMTP](https://wphowto.net/gmail-smtp-plugin-for-wordpress-1341) plugin page.
+For detailed setup instructions/troubleshooting please visit the [Docs page](docs/google-setup.md) page.
