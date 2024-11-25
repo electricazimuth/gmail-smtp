@@ -1,10 +1,12 @@
 <?php
 /*
-Plugin Name: Gmail SMTP
-Version: 1.2.3.13
-Plugin URI: https://wphowto.net/gmail-smtp-plugin-for-wordpress-1341
-Author: naa986
-Author URI: https://wphowto.net/
+Plugin Name: Gmail SMTP Beep
+Version: 1.2.3.14
+Plugin URI: https://electric-azimuth/
+Author: Electric Azimuth
+Author URI: https://electric-azimuth/
+Original Author: naa986
+Original Author URI: https://wphowto.net/
 Description: Easily send email from your WordPress site via Gmail SMTP server
 Text Domain: gmail-smtp
 Domain Path: /languages 
@@ -181,7 +183,8 @@ class GMAIL_SMTP {
         if(is_admin()){
             if(isset($_GET['action']) && $_GET['action'] == "oauth_grant"){
                 
-                include_once('google-api-php-client/vendor/autoload.php');
+                //include_once('google-api-php-client/vendor/autoload.php');
+                require_once 'vendor/autoload.php';
                 include_once('class.phpmaileroauthgoogle.php');
                 
                 if (isset($_GET['code'])) {
@@ -696,7 +699,8 @@ function gmail_smtp_pre_wp_mail($null, $atts)
     require_once ABSPATH . WPINC . '/PHPMailer/PHPMailer.php';
     require_once ABSPATH . WPINC . '/PHPMailer/SMTP.php';
     require_once ABSPATH . WPINC . '/PHPMailer/Exception.php';
-    include_once('google-api-php-client/vendor/autoload.php');
+    //include_once('google-api-php-client/vendor/autoload.php');
+    require_once 'vendor/autoload.php';
     include_once('class.phpmaileroauthgoogle.php');
     include_once('class.phpmaileroauth.php');
 
